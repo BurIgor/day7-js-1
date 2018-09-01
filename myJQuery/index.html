@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Testing JQuery-html</title>
+    <script src="jqueryhtml.js"></script>
+</head>
+<body>
+    <div id="bttn"><input type="button" onclick="tryTest()" value="To test JQuery-html"></div>
+    <div id="testing"><p>Testing</p></div>
+    <script>
+        function tryTest() {
+            console.log($('#bttn').html());
+            console.log($('#testing').html());
+            $('#testing').html("<p>Test's finished!</p>");
+            console.log($('#testing').html());
+        }
+    </script>
+</body>
+</html>
