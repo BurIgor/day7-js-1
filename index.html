@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Testing LRU-cache</title>
+    <script src="lruCache.js"></script>
+</head>
+<body>
+    <div id="bttn"><input type="button" onclick="test()" value="Test LRU-cache"></div>
+    <p>100 random numbers (from 1 to 15) are transferred to the cache array. <br>After that, the console displays the value of the cache. </p>
+    <script>
+        function test() {
+            var cache = lrucache();
+            function getRandom(min, max) {
+            	return Math.floor(Math.random() * (max - min + 1)) + min; 
+            }
+            var ind = 0;
+            for (var j = 0; j < 100; j++) 
+            	cache.add(getRandom(1, 15));                      	
+			console.log(cache.add());
+        }
+    </script>
+</body>
+</html>
